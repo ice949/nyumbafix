@@ -4,6 +4,7 @@ import './App.css';
 import Signup from './Pages/tenant/signup/Signup';
 import Signin from './Pages/tenant/signin/Signin';
 import ReportIssue from './Pages/tenant/report_issue/ReportIssue';
+import Rating from './Pages/tenant/rating/Rating';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/login" element={<Signin />} />/
         <Route path="/signup" element={<Signup />} />
         <Route path="/report-issue" element={<ReportIssue />} />
+        <Route path="/rating" element={<Rating />} />
       </Routes>
     </Router>
   );
