@@ -65,8 +65,7 @@
         max-width: 400px;
         padding: 20px;
         align-items: center;
-        margin-top: 100px;
-        overflow-y: scroll;
+        margin: 100px 0;
         height: auto;
     }
 

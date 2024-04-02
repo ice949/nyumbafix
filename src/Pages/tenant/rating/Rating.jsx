@@ -19,7 +19,7 @@ const Rating = () => {
         setMessage('');
         notify();
         setTimeout(() => {
-            navigate('/report-issue');
+            navigate('/feedback');
         }, 3000);
         
     }

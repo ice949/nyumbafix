@@ -1,8 +1,10 @@
 import React, {useState} from 'react';
 import './ReportIssue.css';
 import { toast, Toaster } from "react-hot-toast";
+import { useNavigate } from 'react-router-dom';
 
 const ReportIssue = () => {
+    const navigate = useNavigate();
     const mantainanceCategories = ['Electrical', 'Plumbing', 'Carpentry', 'Painting', 'Others'];
     const [apartmentName, setApartmentName] = useState('');
     const [unitNumber, setUnitNumber] = useState('');
@@ -23,6 +25,9 @@ const ReportIssue = () => {
         setMantainanceType('Electrical');
         setImage('');
         notify();
+        setTimeout(() => {
+            navigate('/rating');
+        }, 3000);
     }
   return (
     <div className='report-issue'>
