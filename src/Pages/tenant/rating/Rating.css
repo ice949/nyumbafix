@@ -1,0 +1,55 @@
+.rating {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.padding {
+    padding: 20px;
+}
+
+.rating-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 400px;
+    gap: 20px;
+    background-color: #ebe9e9;
+    padding: 20px;
+    align-items: center;
+
+}
+
+.rating-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 400px;
+    align-items: center;
+}
+
+.rating-profile {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    align-items: center;
+}
+
+.rating-profile h1 {
+    padding: 15px;
+    font-size: 25px;
+    color: #fff;
+    background-color: #000;
+    border-radius: 50%;
+}
+
+.rating-form .form-group {
+    width: 100%;
+    max-width: 300px;
+}
