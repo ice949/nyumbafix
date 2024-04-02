@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import './ReportIssue.css';
+import { toast, Toaster } from "react-hot-toast";
 
 const ReportIssue = () => {
     const mantainanceCategories = ['Electrical', 'Plumbing', 'Carpentry', 'Painting', 'Others'];
@@ -10,13 +11,26 @@ const ReportIssue = () => {
     const [description, setDescription] = useState('');
     const [mantainanceType, setMantainanceType] = useState('Electrical');
     const [image, setImage] = useState('');
+
+    const reportIssue = (e) => {
+        e.preventDefault();
+        const notify = () => toast("Your Request has been successfully submitted.");
+        setApartmentName('');
+        setUnitNumber('');
+        setTenantName('');
+        setContactNumber('');
+        setDescription('');
+        setMantainanceType('Electrical');
+        setImage('');
+        notify();
+    }
   return (
     <div className='report-issue'>
         <div className="report-welcome">
             <h1>Report an issue</h1>
             <p>Describe below the issues you are facing.</p>
         </div>
-        <form className="report-form">
+        <form className="report-form" onSubmit={(e) => {reportIssue(e)}}>
             <div className="form-group">
                 <label htmlFor="apartment-name">Apartment Name</label>
                 <input type="text" id="apartment-name" name="apartment-name" value={apartmentName} onChange={(e) => setApartmentName(e.target.value)} required/>
@@ -50,6 +64,14 @@ const ReportIssue = () => {
             <div className="form-group">
                 <button type="submit">Send Request</button>
             </div>
+            <Toaster
+          toastOptions={{
+            style: {
+              background: "green",
+              color: "#fff",
+            },
+          }}
+        />
         </form>
     </div>
   )
