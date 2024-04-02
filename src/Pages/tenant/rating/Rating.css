@@ -16,10 +16,17 @@
     width: 100%;
     max-width: 400px;
     gap: 20px;
-    background-color: #ebe9e9;
+    background-color: #f1f0f0;
     padding: 20px;
     align-items: center;
 
+}
+
+.rating-welcome {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
 }
 
 .rating-form {
@@ -29,6 +36,11 @@
     width: 100%;
     max-width: 400px;
     align-items: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .rating-profile {
@@ -51,5 +63,5 @@
 
 .rating-form .form-group {
     width: 100%;
-    max-width: 300px;
+    /* max-width: 300px; */
 }
