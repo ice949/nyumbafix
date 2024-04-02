@@ -1,10 +1,18 @@
 import React, {useState} from 'react';
 import './Signin.css';
 import logo from '../../../assets/logo.svg';
+import { useNavigate } from 'react-router-dom';
 
 const Signin = () => {
+    const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+
+    const login = (e) => {
+        e.preventDefault();
+        console.log(email, password);
+        navigate('/report-issue');
+    }
   return (
     <div className='auth-container'>
         <div className="logo">
@@ -14,7 +22,7 @@ const Signin = () => {
             <h1>Log in to your account</h1>
             <p>Welcome back! Please enter your details.</p>
         </div>
-        <form className="auth-form">
+        <form className="auth-form" onSubmit={(e) => {login(e)}}>
             <div className="form-group">
                 <label htmlFor="email">Email</label>
                 <input type="email" id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} required/>
